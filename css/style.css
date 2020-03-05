@@ -1,0 +1,360 @@
+/* Dropdown Button */
+/* Dropdown Button */
+
+#clear-cart{
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+.dropbtn {
+  color:#FFF;
+  background-color: rgb(230, 56, 3);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: rgb(250, 77, 25);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 20px;
+  color:black;
+  font-style: italic;
+  left: auto;
+  right: 0;
+  max-height:500px;
+  min-width: 200px;
+  overflow:scroll; 
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/*shopping cart start*/
+body {
+  padding-top: 80px;
+}
+
+.show-cart li {
+  display: flex;
+  position: absolute;
+  margin: 10px;
+
+}
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+} 
+/*shopping cart end*/
+
+/*hover start*/
+.example {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-align:center;
+  }
+  .example .fadedbox {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #414345;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  opacity: 0.2;
+  height:100%;
+  width:100%;
+  font-family: 'Courier New', Courier, monospace;
+  }
+  .example:hover .fadedbox { opacity: 0.8; }
+  .example .text {
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  transform: translateY(30px);
+  -webkit-transform: translateY(30px);
+  }
+  .example .title {
+  font-size:40px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition-delay: 0.2s;
+  transition-duration: 0.3s;
+  }
+  .example:hover .title,
+  .example:focus .title {
+  opacity: 1;
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  }
+/*hover end*/
+
+/* carousel start */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.carousel-wrapper {
+  position: relative;
+}
+.carousel-wrapper .carousel-item {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.carousel-wrapper .carousel-item .arrow {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background: url("../img/arrow2.png") 50% 50%/20px no-repeat;
+}
+.carousel-wrapper .carousel-item .arrow.arrow-prev {
+  left: 0;
+}
+.carousel-wrapper .carousel-item .arrow.arrow-next {
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.carousel-wrapper .carousel-item.light {
+  color: white;
+}
+.carousel-wrapper .carousel-item.light .arrow {
+  background: url("../img/arrow2.png") 50% 50%/20px no-repeat;
+}
+@media (max-width: 480px) {
+  .carousel-wrapper .carousel-item .arrow, .carousel-wrapper .carousel-item.light .arrow {
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+}
+.carousel-wrapper [id^="target-item"] {
+  display: none;
+}
+.carousel-wrapper .item-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url("../img/ip11.jpg") no-repeat;
+  background-size: cover;
+}
+.carousel-wrapper .item-2 {
+  background: url("../img/s20.jpg") no-repeat;
+  background-size: cover;
+}
+.carousel-wrapper .item-3 {
+  background: url("../img/googlepixel.jpg") no-repeat;
+  background-size: cover;
+}
+.carousel-wrapper *:target ~ .item-1 {
+  opacity: 0;
+}
+.carousel-wrapper #target-item-1:target ~ .item-1 {
+  opacity: 1;
+}
+.carousel-wrapper #target-item-2:target ~ .item-2, .carousel-wrapper #target-item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+
+
+
+/* carousel end */
+
+
+/*modal start*/
+.show-cart li {
+  display: flex;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 10px;
+  height: 10px;
+  align-self: center;
+}
+
+/*modal end*/
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+.logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+    
+}
+body {
+    margin: 0 auto;
+    font-family: Arial;
+}
+
+.zone {
+    color:#FFF;
+    font-size:2em;
+    transition: all 0.3s linear;
+}
+
+
+
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-size: 0.7em;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        font-size: 0.5em;
+        padding: 0;
+    }
+}
+
+
+.push-left {
+    margin-left: auto;
+}
+
+.push-right {
+  margin-right: auto;
+}
+
+li {
+    padding: 20px;
+}
+
+a {
+    color: #f5f5f6;
+    text-decoration: none;
+}
+
+.sticky {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.container {
+    /*show heigh: auto*/
+    height: 10vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 0px;
+}
+
+.box {
+    background-color: rgb(250, 77, 25);
+    margin: 20px;
+    padding-top:50px;
+    padding-bottom:40px;
+}
+
+.box > img {
+    width: 100px;
+}
+
+
+
+.box > img {
+    width: 300px;
+    height: 400px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #444;
+}
+
+
+
+
+.black
+{
+    background: #232526    ; /* Old browsers */
+    background: -moz-linear-gradient(top, #232526  0%, #414345 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#232526 ),  color-stop(100%,#414345)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #232526  0%,#414345 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #232526 0%,#414345 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #232526  0%,#414345 100%); /* IE10+ */
+    background: linear-gradient(top, #232526  0%,#414345 100%); /* W3C */
+}
+
+.white
+{
+  background: #FFF    ; /* Old browsers */
+  background: -moz-linear-gradient(top, #FFF  0%, hsl(210, 4%, 81%) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF ),  color-stop(100%,hsl(210, 4%, 81%) )); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #FFF  0%,hsl(210, 4%, 81%) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #FFF 0%,hsl(210, 4%, 81%)  100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #FFF  0%,hsl(210, 4%, 81%)  100%); /* IE10+ */
+  background: linear-gradient(top, #FFF  0%,hsl(210, 4%, 81%)  100%) /* W3C */
+}
